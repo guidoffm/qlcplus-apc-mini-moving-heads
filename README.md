@@ -8,6 +8,12 @@ In the demo video, a software emulator of the APC mini mk2 stands in for the har
 
 The project was partially created with the help of AI, including the background music of the video.
 
+## Video
+
+[![Demo video on YouTube](docs/video-preview.jpg)](https://www.youtube.com/watch?v=GnkUbPkxOSo)
+
+Watch the [demo on YouTube](https://www.youtube.com/watch?v=GnkUbPkxOSo) (5:53). On the left is the QLC+ virtual console, on the right the 3D view and the APC mini mk2 emulator. Captions show which program is running.
+
 ## Requirements
 
 - QLC+ 5 (tested with 5.3.0, see [known issue](#known-issue-no-microphone-access-on-macos-qlc-530))
@@ -100,6 +106,7 @@ A separate wrapper app with its own microphone permission didn't work in our tes
 | File | Description |
 |---|---|
 | `moving-heads-apc-mini.qxw` | The QLC+ workspace |
+| `docs/video-preview.jpg` | Preview image for the video |
 | `docs/input-output.png` | Screenshot of the Input/Output settings |
 | `LICENSE` | MIT License |
 
