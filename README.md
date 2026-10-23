@@ -48,6 +48,8 @@ The workspace was saved with the emulator as input device. With a real controlle
 
 Select your own DMX interface here, or remove the output if you only use the 3D view.
 
+**Universes 2–4:** The loopback between Universe 2 and Universe 3 was created by the QLC+ wizard. The project doesn't use it, so you can ignore or remove it.
+
 **Audio:** In the top row, *Global Audio* uses the microphone as input. The beat-synced effects need it (see [Audio beat sync](#audio-beat-sync)).
 
 Command line start (macOS, recommended because of the [microphone issue](#known-issue-no-microphone-access-on-macos-qlc-530)):
