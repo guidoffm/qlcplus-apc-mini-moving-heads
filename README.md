@@ -21,13 +21,13 @@ The workspace only uses resources that ship with QLC+:
 ## Getting started
 
 1. Open `moving-heads-apc-mini.qxw` in QLC+. The workspace starts in the virtual console.
-2. To see the stage, open the 3D view: go to **Fixtures & Functions → 2D/3D view** and switch to 3D.
+2. To see the stage, open the 3D preview in QLC+.
 3. Optional: connect the APC mini mk2. Under **Inputs/Outputs**, select it as input and as feedback output for universe 1, using the profile *Akai APC Mini mk2*. The workspace was saved with a device called "Virtual APC Mini", so you'll need to change this setting.
 4. Under **Inputs/Outputs**, set the DMX output to your own interface. If you only want to use the 3D view, you don't need a DMX output.
 
-Command line start (macOS), opening the virtual console in operate mode:
+Command line start (macOS):
 
-    /Applications/QLC+.app/Contents/MacOS/qlcplus -w -o moving-heads-apc-mini.qxw
+    /Applications/QLC+.app/Contents/MacOS/qlcplus5 -o moving-heads-apc-mini.qxw
 
 ## Controller layout
 
@@ -53,3 +53,8 @@ The movement effects are relative, so they move around whichever position is act
 | File | Description |
 |---|---|
 | `moving-heads-apc-mini.qxw` | The QLC+ workspace |
+| `LICENSE` | MIT License |
+
+## License
+
+Released under the [MIT License](LICENSE).
