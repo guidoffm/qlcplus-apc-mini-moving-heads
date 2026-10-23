@@ -1,4 +1,4 @@
-# QLC+ Moving Head Demo for the AKAI APC mini mk2
+# QLC+ 5 Moving Head Demo With Optional External MIDI Controller
 
 A demo workspace for [QLC+ 5](https://www.qlcplus.org/) that drives **32 moving heads** on four trusses (8 heads per truss). The show is shown in the QLC+ 3D view, so no real lights are needed.
 
