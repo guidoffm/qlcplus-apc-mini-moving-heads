@@ -10,7 +10,8 @@ The project was partially created with the help of AI, including the background 
 
 ## Requirements
 
-- QLC+ 5 (tested with 5.3.0)
+- QLC+ 5 (tested with 5.3.0, see [known issue](#known-issue-no-microphone-access-on-macos-qlc-530))
+- An audio input (microphone or line in) for the beat-synced effects
 - Optional: AKAI APC mini mk2 (the first-generation APC mini has no RGB pads, so its feedback colors won't match)
 
 The workspace only uses resources that ship with QLC+:
@@ -25,7 +26,7 @@ The workspace only uses resources that ship with QLC+:
 3. Optional: connect the APC mini mk2. Under **Inputs/Outputs**, select it as input and as feedback output for universe 1, using the profile *Akai APC Mini mk2*. The workspace was saved with a device called "Virtual APC Mini", so you'll need to change this setting.
 4. Under **Inputs/Outputs**, set the DMX output to your own interface. If you only want to use the 3D view, you don't need a DMX output.
 
-Command line start (macOS):
+Command line start (macOS, recommended because of the [microphone issue](#known-issue-no-microphone-access-on-macos-qlc-530)):
 
     /Applications/QLC+.app/Contents/MacOS/qlcplus5 -o moving-heads-apc-mini.qxw
 
@@ -47,6 +48,26 @@ The pads are counted from top to bottom, as on the device:
 Each group is a solo frame, so pressing a pad replaces the active program of that group. Groups combine with each other: you can run a color, a position, an effect and a movement at the same time.
 
 The movement effects are relative, so they move around whichever position is active.
+
+## Audio beat sync
+
+The workspace uses QLC+'s audio beat detection: the beat generator is set to *Audio*, so the tempo comes from the audio input (e.g. the microphone). These 12 effects are timed in beats, so they only advance while QLC+ detects beats:
+
+Chase, Ping-Pong, Fill/Empty, Police, Rainbow, Color Fade, Waves, Opposite, Truss Swap, Center Fill, Stripes, Random
+
+All other effects, the movements and the auto shows run on fixed times.
+
+### Known issue: no microphone access on macOS (QLC+ 5.3.0)
+
+The macOS app bundle of QLC+ 5.3.0 has no `CFBundleIdentifier`, so macOS never asks for microphone permission and QLC+ only receives silence. The level meter stays empty and the beat-timed effects don't move.
+
+Workaround: start QLC+ from the Terminal. It then uses the Terminal's microphone permission:
+
+    /Applications/QLC+.app/Contents/MacOS/qlcplus5 -o moving-heads-apc-mini.qxw
+
+If macOS asks whether Terminal may use the microphone, allow it. Alternatively, enable it under **System Settings → Privacy & Security → Microphone**.
+
+A separate wrapper app with its own microphone permission didn't work in our tests.
 
 ## Files
 
