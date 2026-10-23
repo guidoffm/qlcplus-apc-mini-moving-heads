@@ -23,8 +23,32 @@ The workspace only uses resources that ship with QLC+:
 
 1. Open `moving-heads-apc-mini.qxw` in QLC+. The workspace starts in the virtual console.
 2. To see the stage, go to **Fixtures & Functions** and click **3D View**. A left click opens the view inside the main window, and a right click opens it in a separate window. The separate window lets you watch the stage and the virtual console side by side.
-3. Optional: connect the APC mini mk2. Under **Inputs/Outputs**, select it as input and as feedback output for universe 1, using the profile *Akai APC Mini mk2*. The workspace was saved with a device called "Virtual APC Mini", so you'll need to change this setting.
-4. Under **Inputs/Outputs**, set the DMX output to your own interface. If you only want to use the 3D view, you don't need a DMX output.
+3. Optional: connect the APC mini mk2 and adjust the input/output settings (see below).
+4. Under **Input/Output**, set the DMX output to your own interface. If you only want to use the 3D view, you don't need a DMX output.
+
+## Input/Output settings
+
+![QLC+ Input/Output settings](docs/input-output.png)
+
+All 32 moving heads are patched to **Universe 1** (12 channels each, DMX 1–384).
+
+**Universe 1, input:**
+
+- Plugin: MIDI
+- Device: the APC mini mk2 (named *Virtual APC Mini* in the screenshot, which is the software emulator used in the video)
+- Profile: **Akai APC Mini mk2**
+- Feedback: enabled (the ⇄ button on the input and the green **F** on the universe). QLC+ then sends the pad colors back to the controller.
+
+The workspace was saved with the emulator as input device. With a real controller, select its MIDI port instead and keep the profile and feedback settings.
+
+**Universe 1, output:**
+
+- Plugin: DMX USB, in the screenshot an FT232R-based USB-DMX interface
+- Output enabled (▶)
+
+Select your own DMX interface here, or remove the output if you only use the 3D view.
+
+**Audio:** In the top row, *Global Audio* uses the microphone as input. The beat-synced effects need it (see [Audio beat sync](#audio-beat-sync)).
 
 Command line start (macOS, recommended because of the [microphone issue](#known-issue-no-microphone-access-on-macos-qlc-530)):
 
@@ -74,6 +98,7 @@ A separate wrapper app with its own microphone permission didn't work in our tes
 | File | Description |
 |---|---|
 | `moving-heads-apc-mini.qxw` | The QLC+ workspace |
+| `docs/input-output.png` | Screenshot of the Input/Output settings |
 | `LICENSE` | MIT License |
 
 ## License
