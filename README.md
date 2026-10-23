@@ -21,7 +21,7 @@ The workspace only uses resources that ship with QLC+:
 ## Getting started
 
 1. Open `moving-heads-apc-mini.qxw` in QLC+. The workspace starts in the virtual console.
-2. To see the stage, open the 3D preview in QLC+.
+2. To see the stage, go to **Fixtures & Functions** and click **3D View**. A left click opens the view inside the main window, and a right click opens it in a separate window. The separate window lets you watch the stage and the virtual console side by side.
 3. Optional: connect the APC mini mk2. Under **Inputs/Outputs**, select it as input and as feedback output for universe 1, using the profile *Akai APC Mini mk2*. The workspace was saved with a device called "Virtual APC Mini", so you'll need to change this setting.
 4. Under **Inputs/Outputs**, set the DMX output to your own interface. If you only want to use the 3D view, you don't need a DMX output.
 
