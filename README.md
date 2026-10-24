@@ -41,7 +41,7 @@ All 32 moving heads are patched to **Universe 1** (12 channels each, DMX 1–384
 **Universe 1, input:**
 
 - Plugin: MIDI
-- Device: the APC mini mk2 (named *Virtual APC Mini* in the screenshot, which is the software emulator used in the video)
+- Device: the APC mini mk2. The workspace uses *Virtual MIDI APC mini mk2*, the port of the software emulator used in the video (the screenshot still shows its former name *Virtual APC Mini*)
 - Profile: **Akai APC Mini mk2**
 - Feedback: enabled (the ⇄ button on the input and the green **F** on the universe). QLC+ then sends the pad colors back to the controller.
 
